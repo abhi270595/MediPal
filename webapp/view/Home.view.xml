@@ -1,0 +1,11 @@
+<mvc:View controllerName="sap.wth.medipal.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="rootControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content></content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
+

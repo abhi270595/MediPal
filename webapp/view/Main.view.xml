@@ -1,0 +1,71 @@
+<View
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	controllerName="sap.wth.medipal.controller.Main">
+	<Page
+		title="Medipal">
+		<content>
+			<layout:VerticalLayout>
+				<HBox>
+		<VBox>
+			<HBox>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Todo" subheader="Pending Tasks"
+					 press="onToPage2">
+					<tileContent>
+						<TileContent unit="" footer="">
+							<content>
+								<NumericContent scale="" value="3" valueColor="Error" indicator=""/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Schedule" press="onToPage3">
+					<tileContent>
+						<TileContent unit="">
+							<content>
+								<NumericContent scale="" value="10" valueColor="Positive" indicator="Up"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+			</HBox>
+			<HBox>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Explore" press="onToPage4">
+					<tileContent>
+						<TileContent unit="">
+							<content>
+								<NumericContent scale="" value="" valueColor="Neutral" indicator=""/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Vacancies" press="onToPage5">
+					<tileContent>
+						<TileContent unit="">
+							<content>
+								<NumericContent scale="" value="100" valueColor="Neutral" indicator=""/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+			</HBox>
+		</VBox>
+		<VBox>
+			<Carousel class="sapUiContentPadding">
+				<pages>
+					
+					<Text class="sapUiSmallMargin"
+						text="Lorem ipsum dolor st amet, 1"/>
+						<Text class="sapUiSmallMargin"
+						text="Lorem ipsum dolor st amet, 2"/>
+						<Text class="sapUiSmallMargin"
+						text="Lorem ipsum dolor st amet, 3"/>
+					
+				</pages>
+			</Carousel>
+		</VBox>
+	</HBox>
+			</layout:VerticalLayout>
+		</content>
+	</Page>
+</View>

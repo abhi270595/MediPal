@@ -1,0 +1,15 @@
+<View
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	controllerName="sap.wth.medipal.controller.Todo">
+	<Page
+		title="Todo"
+		showNavButton="true"
+		navButtonPress="onBack">
+		<content>
+			<layout:VerticalLayout>
+				<Button text="To the first Page" press="onToPage1"/>
+			</layout:VerticalLayout>
+		</content>
+	</Page>
+</View>
