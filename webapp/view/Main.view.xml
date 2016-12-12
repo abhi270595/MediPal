@@ -9,7 +9,7 @@
 				<HBox>
 		<VBox>
 			<HBox>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Todo" subheader="Pending Tasks"
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="To" subheader="Pending Tasks"
 					 press="onToPage2">
 					<tileContent>
 						<TileContent unit="" footer="">
