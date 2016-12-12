@@ -1,70 +1,61 @@
-<View
-	xmlns="sap.m"
-	xmlns:layout="sap.ui.layout"
-	controllerName="sap.wth.medipal.controller.Main">
-	<Page
-		title="Medipal">
+<View xmlns="sap.m" xmlns:layout="sap.ui.layout" controllerName="sap.wth.medipal.controller.Main">
+	<Page title="Medipal">
 		<content>
 			<layout:VerticalLayout>
 				<HBox>
-		<VBox>
-			<HBox>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="To" subheader="Pending Tasks"
-					 press="onToPage2">
-					<tileContent>
-						<TileContent unit="" footer="">
-							<content>
-								<NumericContent scale="" value="3" valueColor="Error" indicator=""/>
-							</content>
-						</TileContent>
-					</tileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Schedule" press="onToPage3">
-					<tileContent>
-						<TileContent unit="">
-							<content>
-								<NumericContent scale="" value="10" valueColor="Positive" indicator="Up"/>
-							</content>
-						</TileContent>
-					</tileContent>
-				</GenericTile>
-			</HBox>
-			<HBox>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Explore" press="onToPage4">
-					<tileContent>
-						<TileContent unit="">
-							<content>
-								<NumericContent scale="" value="" valueColor="Neutral" indicator=""/>
-							</content>
-						</TileContent>
-					</tileContent>
-				</GenericTile>
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Vacancies" press="onToPage5">
-					<tileContent>
-						<TileContent unit="">
-							<content>
-								<NumericContent scale="" value="100" valueColor="Neutral" indicator=""/>
-							</content>
-						</TileContent>
-					</tileContent>
-				</GenericTile>
-			</HBox>
-		</VBox>
-		<VBox>
-			<Carousel class="sapUiContentPadding">
-				<pages>
-					
-					<Text class="sapUiSmallMargin"
-						text="Lorem ipsum dolor st amet, 1"/>
-						<Text class="sapUiSmallMargin"
-						text="Lorem ipsum dolor st amet, 2"/>
-						<Text class="sapUiSmallMargin"
-						text="Lorem ipsum dolor st amet, 3"/>
-					
-				</pages>
-			</Carousel>
-		</VBox>
-	</HBox>
+					<VBox class="tilesVBox">
+						<HBox>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Todo" subheader="Pending Tasks" press="onToPage2">
+								<tileContent>
+									<TileContent unit="" footer="">
+										<content>
+											<NumericContent scale="" value="3" valueColor="Error"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Schedule" press="onToPage3">
+								<tileContent>
+									<TileContent unit="">
+										<content>
+											<NumericContent scale="" value="10" valueColor="Critical" indicator="Up"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</HBox>
+						<HBox>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Explore" press="onToPage4">
+								<tileContent>
+									<TileContent unit="">
+										<content>
+											<NumericContent scale="" value="" valueColor="Good"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Vacancies" press="onToPage5">
+								<tileContent>
+									<TileContent unit="">
+										<content>
+											<NumericContent scale="" value="100" valueColor="Neutral"/>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</HBox>
+					</VBox>
+					<VBox class="carouselVBox">
+						<Carousel class="sapUiContentPadding" loop="true">
+							<pages>
+									<Image src="http://www.planwallpaper.com/static/images/image-slider-2.jpg" alt="Example picture of speakers" width="90%"/>
+								<Image src="http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg" alt="Example picture of USB flash drive" width="90%"/>
+								<Image src="http://www.planwallpaper.com/static/images/image-slider-2.jpg" alt="Example picture of spotlight" width="90%"/>
+								<Image src="http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg" alt="Example picture of screw" width="90%"/>
+							</pages>
+						</Carousel>
+					</VBox>
+				</HBox>
 			</layout:VerticalLayout>
 		</content>
 	</Page>

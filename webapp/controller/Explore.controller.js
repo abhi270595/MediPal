@@ -1,16 +1,16 @@
-sap.ui.define( ["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History"], function (Controller, History) {
+sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History"], function(Controller, History) {
 	"use strict";
 
 	return Controller.extend("sap.wth.medipal.controller.Explore", {
-		onInit : function () {
-			
+		onInit: function() {
+
 		},
 
-		onToPage1 : function () {
+		onToPage1: function() {
 			this.getOwnerComponent().getRouter().navTo("page1");
 		},
 
-		onBack : function () {
+		onBack: function() {
 			var sPreviousHash = History.getInstance().getPreviousHash();
 
 			//The history contains a previous entry
