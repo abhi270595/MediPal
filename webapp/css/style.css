@@ -9,3 +9,29 @@
 	margin-top:175px;
 	margin-left:75px;
 }
+
+.loginHBoxClass {
+	margin-left:175px;
+}
+
+.mainPageButtons {
+	margin-left : 60px;
+	width:250px;
+	height:200px;
+}
+
+.formToolbar {
+	background-color : rgba(255,255,255,0.8);
+}
+
+.formButtons {
+	margin-right:100px;
+}
+
+.loginButton {
+	margin-left: 250px;
+}
+
+.registerButton {
+	margin-left: 50px;
+}

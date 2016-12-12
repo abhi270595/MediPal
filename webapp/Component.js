@@ -21,7 +21,7 @@ sap.ui.define([
 					{
 						name: "page1",
 						// empty hash - normally the start page
-						pattern: "",
+						pattern: "Shashank",
 						target: "page1"
 					},
 					{

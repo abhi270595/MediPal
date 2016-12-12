@@ -1,11 +1,102 @@
 <mvc:View controllerName="sap.wth.medipal.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+	displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:f="sap.ui.layout.form">
 	<App id="rootControl">
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<tnt:ToolHeader>
+						<Button icon="sap-icon://menu2" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+						<ToolbarSpacer width="20px"/>
+						<Button text="File" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Edit" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="View" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Navigate" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Code" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Refactor" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Run" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<Button text="Tools" type="Transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</Button>
+						<tnt:ToolHeaderUtilitySeparator/>
+						<ToolbarSpacer>
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
+							</layoutData>
+						</ToolbarSpacer>
+						<Button text="Alan Smith" type="Transparent" press="handleUserNamePress">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+					<Carousel class="sapUiContentPadding" loop="true" id="mainCarousel">
+						<pages>
+							<Image src="http://www.planwallpaper.com/static/images/image-slider-2.jpg" alt="Example picture of speakers" width="90%"/>
+							<Image src="http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg" alt="Example picture of USB flash drive" width="90%"/>
+							<Image src="http://www.planwallpaper.com/static/images/image-slider-2.jpg" alt="Example picture of spotlight" width="90%"/>
+							<Image src="http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg" alt="Example picture of screw" width="90%"/>
+						</pages>
+					</Carousel>
+					<HBox id="loginHBox" class="loginHBoxClass">
+						<Button text="I'm a Doctor" press="onPressDoctor" type="Accept" icon="sap-icon://stethoscope" class="mainPageButtons"></Button>
+						<Button text="I'm a Patient" press="onPressPatient" type="Reject" icon="sap-icon://wounds-doc" class="mainPageButtons"></Button>
+						<Button text="I'm an Institution " press="onPressInstitution" type="Emphasized" icon="sap-icon://building" class="mainPageButtons"></Button>
+					</HBox>
+					<VBox id="mainLoginForm">
+						<f:SimpleForm id="LoginForm" title="" editable="true" class="doctorForm">
+							<f:content>
+								<Label text="UserName"/>
+								<Input id="userName"/>
+								<Label text="Password"/>
+								<Input type="Password" id="pass"/>
+							</f:content>
+							<!--<f:toolbar>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://visits" text="Login" press="onLoginPress" class="loginButton"/>
+								</f:toolbar>-->
+						</f:SimpleForm>
+						<Toolbar class="formToolbar">
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://visits" text="Login" press="onLoginPress" class="sapUiSmallMarginEnd loginButton" type="Emphasized"/>
+							<Button icon="sap-icon://add-contact" text="Register" press="onRegisterPress" class="sapUiSmallMarginEnd registerButton" type="Emphasized"/>
+						</Toolbar>
+					</VBox>
+				</content>
 			</Page>
 		</pages>
 	</App>
 </mvc:View>
-
