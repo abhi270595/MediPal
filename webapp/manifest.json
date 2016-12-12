@@ -2,6 +2,7 @@
 	"_version": "1.1.0",
 	"sap.app": {
 		"ach" : "ACH",
+		"resources": "resources.json",
 		"_version": "1.1.0",
 		"id": "sap.wth.medipal",
 		"type": "application",
