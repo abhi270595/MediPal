@@ -15,7 +15,7 @@
 }
 
 .mainPageButtons {
-	margin-left : 60px;
+	margin-left : 50px;
 	width:250px;
 	height:200px;
 }
@@ -34,4 +34,9 @@
 
 .registerButton {
 	margin-left: 50px;
+}
+
+.mainCarouselClass {
+	margin-top:20px;
+	height:61%;
 }

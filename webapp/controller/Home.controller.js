@@ -83,7 +83,7 @@ sap.ui.define([
 		onPressDoctor : function () {
 			var loginForm = this.getView().byId("LoginForm");
 			var mainLogin = this.getView().byId("mainLoginForm");
-			var mainCarousel = this.getView().byId("mainCarousel");
+			var mainCarousel = this.getView().byId("carouselVBox");
 			mainCarousel.setVisible(false);
 			mainLogin.setVisible(true);
 			loginForm.setTitle("Doctor");
@@ -93,7 +93,7 @@ sap.ui.define([
 		onPressPatient : function () {
 			var loginForm = this.getView().byId("LoginForm");
 			var mainLogin = this.getView().byId("mainLoginForm");
-			var mainCarousel = this.getView().byId("mainCarousel");
+			var mainCarousel = this.getView().byId("carouselVBox");
 			mainCarousel.setVisible(false);
 			mainLogin.setVisible(true);
 			loginForm.setTitle("Patient");
@@ -102,7 +102,7 @@ sap.ui.define([
 		onPressInstitution : function () {
 			var loginForm = this.getView().byId("LoginForm");
 			var mainLogin = this.getView().byId("mainLoginForm");
-			var mainCarousel = this.getView().byId("mainCarousel");
+			var mainCarousel = this.getView().byId("carouselVBox");
 			mainCarousel.setVisible(false);
 			mainLogin.setVisible(true);
 			loginForm.setTitle("Institution");
@@ -129,14 +129,14 @@ sap.ui.define([
 			var passValue = pass.getValue();
 			if (userValue!== "" && passValue!== "") {
 				if (userValue==="abinash" && passValue==="pass1234") {
-					//alert("Doctor");
+					alert("Doctor");
 					this.getOwnerComponent().getRouter().navTo("page1");
 					//this.getOwnerComponent().getRouter().navTo("page1");
 				} else {
-					//alert("Invalid login....Please try again");
+					alert("Invalid login....Please try again");
 				}
 			} else {
-				//alert("fill in both th fields to login");
+				alert("fill in both th fields to login");
 			}
 		},
 		
@@ -147,13 +147,13 @@ sap.ui.define([
 			var passValue = pass.getValue();
 			if (userValue!== "" && passValue!== "") {
 				if (userValue==="meet" && passValue==="pass2341") {
-					//alert("Patient");
+					alert("Patient");
 					//this.getOwnerComponent().getRouter().navTo("page1");
 				} else {
-					//alert("Invalid login....Please try again");
+					alert("Invalid login....Please try again");
 				}
 			}else {
-				//alert("fill in both th fields to login");
+				alert("fill in both th fields to login");
 			}
 		},
 		
@@ -164,13 +164,13 @@ sap.ui.define([
 			var passValue = pass.getValue();
 			if (userValue!== "" && passValue!== "") {
 				if (userValue==="prasita" && passValue==="pass3412") {
-					//alert("Institution");
+					alert("Institution");
 					//this.getOwnerComponent().getRouter().navTo("page1");
 				} else {
-					//alert("Invalid login....Please try again");
+					alert("Invalid login....Please try again");
 				}
 			}else {
-				//alert("fill in both th fields to login");
+				alert("fill in both th fields to login");
 			}
 		}
 		

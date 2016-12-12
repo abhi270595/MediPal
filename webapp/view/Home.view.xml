@@ -63,6 +63,7 @@
 							</layoutData>
 						</Button>
 					</tnt:ToolHeader>
+					<HBox class="mainCarouselClass" id="carouselVBox">
 					<Carousel class="sapUiContentPadding" loop="true" id="mainCarousel">
 						<pages>
 							<Image src="http://www.planwallpaper.com/static/images/image-slider-2.jpg" alt="Example picture of speakers" width="90%"/>
@@ -71,6 +72,7 @@
 							<Image src="http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg" alt="Example picture of screw" width="90%"/>
 						</pages>
 					</Carousel>
+					</HBox>
 					<HBox id="loginHBox" class="loginHBoxClass">
 						<Button text="I'm a Doctor" press="onPressDoctor" type="Accept" icon="sap-icon://stethoscope" class="mainPageButtons"></Button>
 						<Button text="I'm a Patient" press="onPressPatient" type="Reject" icon="sap-icon://wounds-doc" class="mainPageButtons"></Button>
