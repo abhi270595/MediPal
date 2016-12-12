@@ -1,15 +1,40 @@
-<View
-	xmlns="sap.m"
-	xmlns:layout="sap.ui.layout"
-	controllerName="sap.wth.medipal.controller.Vacancies">
-	<Page
-		title="Vacancies"
-		showNavButton="true"
-		navButtonPress="onBack">
-		<content>
-			<layout:VerticalLayout>
-				<Button text="To the first Page" press="onToPage1"/>
-			</layout:VerticalLayout>
-		</content>
-	</Page>
+<View controllerName="sap.wth.medipal.controller.Vacancies" xmlns:layout="sap.ui.layout" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m">
+	<m:Page title="Vacancies" showNavButton="true" navButtonPress="onBack">
+		<m:content>
+			<Table id="table" selectionMode="MultiToggle" rows="{/ProductCollection}" visibleRowCount="7" enableCellFilter="{ui>/cellFilterOn}"
+				filter="filterPrice" ariaLabelledBy="title">
+				<toolbar>
+					<m:Toolbar>
+						<m:Title id="title" text="Vacancies"></m:Title>
+						<m:ToolbarSpacer/>
+						<m:Button icon="sap-icon://decline" tooltip="Clear all filters" press="clearAllFilters"/>
+						<m:ToolbarSeparator/>
+						<m:SearchField placeholder="Filter" value="{ui>/globalFilter}" search="filterGlobally" width="15rem"/>
+					</m:Toolbar>
+				</toolbar>
+				<columns>
+					<Column width="11rem" filterProperty="Name">
+						<m:Label text="Hospital Name"/>
+						<template>
+							<m:Text text="{Name}"/>
+						</template>
+					</Column>
+					<Column width="11rem" filterProperty="Category" defaultFilterOperator="StartsWith">
+						<m:Label text="Specialization"/>
+						<template>
+							<m:Text text="{Category}"/>
+						</template>
+					</Column>
+					<Column id="availability" width="9rem" filterProperty="Available" showFilterMenuEntry="false" defaultFilterOperator="EQ"
+						filterType="sap.ui.model.type.Boolean">
+						<m:Label text="Status"/>
+						<template>
+							<m:ObjectStatus text="{Status}" state="{ path: 'Available', formatter: 'sap.wth.medipal.utils.TableUtils.formatAvailableToObjectState' }"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
 </View>

@@ -4,8 +4,78 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.wth.medipal.controller.Home", {
+		onInit: function() {
+			var data = {
+				newTodo: "",
+				todos: [{
+					title: "ABC Clinic visit",
+					completed: false,
+					date: new Date("2016", "11", "15", "9", "0")
+				}, {
+					title: "Medicine Representive visit",
+					completed: false,
+					date: new Date("2016", "11", "15", "13", "0")
+				}, {
+					title: "Have to go to medicine store",
+					completed: false,
+					date: new Date("2016", "11", "15", "16", "0")
+				}],
+				someCompleted: false,
+				completedCount: 0,
+				startDate: new Date("2016", "11", "14", "8", "0"),
+				people: [{
+					pic: "sap-icon://doctor",
+					name: "Dr. Shashank",
+					role: "Dermatologist",
+					appointments: [{
+						start: new Date("2016", "11", "14", "9", "0"),
+						end: new Date("2016", "11", "14", "1", "00"),
+						title: "Appointment- Prasita",
+						info: "Clinic",
+						type: "Type01",
+						pic: "sap-icon://sap-ui5",
+						tentative: false
+					}, {
+						start: new Date("2016", "11", "14", "10", "30"),
+						end: new Date("2016", "11", "14", "11", "30"),
+						title: "Appointment- Abhisek",
+						type: "Type02",
+						pic: "sap-icon://sap-ui5",
+						tentative: false
+					}, {
+						start: new Date("2016", "11", "14", "11", "30"),
+						end: new Date("2016", "11", "14", "13", "00"),
+						title: "Appointment- Abhay",
+						type: "Type03",
+						pic: "",
+						tentative: true
+					}, {
+						start: new Date("2016", "11", "14", "14", "0"),
+						end: new Date("2016", "11", "14", "16", "00"),
+						title: "Appointment- Pratika",
+						type: "Type04",
+						pic: "",
+						tentative: false
+					}, {
+						start: new Date("2016", "2", "9", "9", "0"),
+						end: new Date("2016", "2", "9", "16", "0"),
+						title: "Busy",
+						type: "Type08",
+						tentative: false
+					}],
+					headers: [{
+						start: new Date("2016", "11", "15", "9", "0"),
+						end: new Date("2016", "11", "15", "17", "0"),
+						title: "Clinic Visit",
+						pic: "sap-icon://accidental-leave",
+						type: "Type05",
+						tentative: false
+					}]
+				}]
+			};
+			var oModel = new sap.ui.model.json.JSONModel(data);
+			sap.ui.getCore().setModel(oModel, "data");
 
-		onInit : function () {
 			var mainLogin = this.getView().byId("mainLoginForm");
 			mainLogin.setVisible(false);
 		},
@@ -104,5 +174,6 @@ sap.ui.define([
 			}
 		}
 		
+				
 	});
 });

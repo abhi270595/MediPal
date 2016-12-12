@@ -9,7 +9,8 @@
 								<tileContent>
 									<TileContent unit="" footer="">
 										<content>
-											<NumericContent scale="" value="3" valueColor="Error"/>
+
+											<NumericContent id="id_todos" scale="" value="{ path: '/todos', formatter: '.formatter.getTodoCount'}" valueColor="Error"/>
 										</content>
 									</TileContent>
 								</tileContent>
@@ -18,7 +19,9 @@
 								<tileContent>
 									<TileContent unit="">
 										<content>
-											<NumericContent scale="" value="10" valueColor="Critical" indicator="Up"/>
+
+											<NumericContent scale="" id="id_appointments" value="{ path: '/people/0/appointments', formatter: '.formatter.getAppointmentCount'}"
+												valueColor="Good" indicator="Up"/>
 										</content>
 									</TileContent>
 								</tileContent>
@@ -29,7 +32,8 @@
 								<tileContent>
 									<TileContent unit="">
 										<content>
-											<NumericContent scale="" value="" valueColor="Good"/>
+
+											<NumericContent scale="" value="" valueColor="Neutral"/>
 										</content>
 									</TileContent>
 								</tileContent>
@@ -38,7 +42,8 @@
 								<tileContent>
 									<TileContent unit="">
 										<content>
-											<NumericContent scale="" value="100" valueColor="Neutral"/>
+
+											<NumericContent scale="" value="14" valueColor="Good"/>
 										</content>
 									</TileContent>
 								</tileContent>

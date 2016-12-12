@@ -7,9 +7,25 @@
 		showNavButton="true"
 		navButtonPress="onBack">
 		<content>
-			<layout:VerticalLayout>
-				<Button text="To the first Page" press="onToPage1"/>
-			</layout:VerticalLayout>
-		</content>
+					<Input class="todoInput" value="{/newTodo}" placeholder="What needs to be done ?" change="addTodo" />
+					<List id="todo-list" items="{/todos}" select="toggleCompleted"
+						mode="MultiSelect"
+						growing="true"
+						growingScrollToLoad="true"
+						showNoData="false"
+						showSeparators="None"
+						rememberSelections="false">
+						<CustomListItem selected="{completed}">
+							<Text text="{title} ---- {date}" />
+						</CustomListItem>
+					</List>
+				</content>
+				<footer>
+					<Bar>
+						<contentMiddle>
+							<Button visible="{/someCompleted}" icon="sap-icon://delete" text="Clear completed ({/completedCount})" press="clearCompleted" />
+						</contentMiddle>
+					</Bar>
+				</footer>
 	</Page>
 </View>
